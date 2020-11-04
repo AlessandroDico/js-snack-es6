@@ -86,6 +86,7 @@ Stampare a schermo la bici con peso minore.
 
 //stabilisco il peso iniziale uguale al peso della prima bici
     let startWeight = bikes2[0].weight;
+    let startName = bikes2[0].name;
     console.log(startWeight);
 
 
@@ -96,10 +97,14 @@ Stampare a schermo la bici con peso minore.
 
         if (item.weight < startWeight) {
             startWeight = item.weight;
+            startName = item.name;
         }
     });
 
-console.log(startWeight);
+    console.log(startWeight);
+    console.log(startName);
+
+    $('.container').append(`la bici con peso minore è ${startName} con un peso di ${startWeight}`);
 
 
 });
