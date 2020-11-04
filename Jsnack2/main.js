@@ -24,9 +24,23 @@ do {
 
     } while ((isNaN(userNumbers) || userNumbers < 0 || userNumbers > 10 || rangeNumbers.length < 2));
 
-const nameRange = name.filter((element, index) =>);
+// MI ASSICURO CHE I NUMERI SIANO IN ORDINE CRESCENTE
+const orderNumbers = rangeNumbers.sort(function(a, b){return a-b});
+console.log(orderNumbers);
 
-    if (element) {
+//I NUMERI MESSI DALL'UTENTE CREANO IL RANGE.. DEVO PRENDERE GLI ELEMENTI DELL'ARRAY CON INDICE INIZIALE IL NUMERO PIU' PICCOLO E COME INDICE FINALE IL NUMERO PIU' GRANDE
+//  QUINDI SE UN NUMERO è UGUALE O MAGGIORE DEL NUMERO MINIMO E UGUALE O MINORE DEL NUMERO MASSIMO PUO' ESSERE MESSO NELL'ARRAY
+// PROVO CON UN FILTER
 
-    }
+
+    const nameRange = names.filter((element, index) => {
+
+        if (index >= rangeNumbers[0] && index <= rangeNumbers[1]) {
+            return element;
+        }
+    });
+
+    console.log(nameRange);
+
+
 });
