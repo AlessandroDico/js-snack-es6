@@ -10,7 +10,7 @@ da corsa con le seguenti proprietà: nome e peso.
 Stampare a schermo la bici con peso minore.
 */
 
-
+/*
     const bikes = [
         {
             name : 'Bianchi',
@@ -61,7 +61,45 @@ Stampare a schermo la bici con peso minore.
     console.log(bikeLessWeight);
 
     $('.container').append(`la bici con peso minore è ${bikeLessWeight} con un peso di ${minWeight}`);
+*/
 
+//SOLUZIONE DUE
+
+    const bikes2 = [
+        {
+            name : 'Bianchi',
+            weight : 9.1,
+        },
+        {
+            name : 'Specialized',
+            weight : 8.4,
+        },
+        {
+            name : 'Cannondale',
+            weight : 8.1,
+        },
+        {
+            name : 'Colnago',
+            weight : 9.3,
+        },
+    ];
+
+//stabilisco il peso iniziale uguale al peso della prima bici
+    let startWeight = bikes2[0].weight;
+    console.log(startWeight);
+
+
+//ora dovrò ciclare tutte le bici e capire se il peso della bici corrente è inferiore al peso iniziale.. in quel caso dovrò modificare il valore al peso iniziale
+//poi dovrò far combaciare il peso alla bici corretta
+
+    bikes2.forEach((item, i) => {
+
+        if (item.weight < startWeight) {
+            startWeight = item.weight;
+        }
+    });
+
+console.log(startWeight);
 
 
 });
