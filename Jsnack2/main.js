@@ -40,8 +40,38 @@ console.log(orderNumbers);
         }
     });
 
+// FORMA COMPATTA DEL FILTER
+
+const nameInRange = names.filter((element, index) => {
+
+    return (index >= rangeNumbers[0] && index <= rangeNumbers[1]);
+
+});
+
+
     console.log(nameInRange);
 
 $('.container').append(`i nomi selezionati sono ${nameInRange}`);
+
+
+
+
+
+//------------------ SOLUZIONE CON FOREACH------------------
+
+const myArray = ['pippo', 'mario', 'luca', 'pluto', 'maria', 'marco', 'paola', 'giovanna', 'piera', 'mimmo'];
+
+const min = prompt('inserisci un numero da 0 a 9');
+const max = prompt('inserisci un numero da 0 a 9');
+
+const newArray = [];
+
+myArray.forEach((element, index) => {
+    if (min <= index && max >= index) {
+        newArray.push(element);
+    }
+});
+
+console.log(newArray);
 
 });
