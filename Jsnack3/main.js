@@ -37,19 +37,20 @@ const generateRandomLetter = () => {
     const newAnimals = animals.map((element, index) => {
         console.log(element);
         console.log(index);
-        
-        return element;
 
+
+        const copyElement = {
+            ...element,
+            position : generateRandomLetter(),
+        }
+
+        return copyElement;
     });
 
 
 
-//scorro tutto l'array e ad ogni elemento aggiungo una chiave position
-    newAnimals.forEach((element, index) => {
-        element.position = generateRandomLetter();
-    });
+console.log(newAnimals);
 
-    console.log(newAnimals);
 
 
 
