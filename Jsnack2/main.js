@@ -33,14 +33,15 @@ console.log(orderNumbers);
 // PROVO CON UN FILTER
 
 
-    const nameRange = names.filter((element, index) => {
+    const nameInRange = names.filter((element, index) => {
 
         if (index >= rangeNumbers[0] && index <= rangeNumbers[1]) {
             return element;
         }
     });
 
-    console.log(nameRange);
+    console.log(nameInRange);
 
+$('.container').append(`i nomi selezionati sono ${nameInRange}`);
 
 });
