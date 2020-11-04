@@ -39,15 +39,16 @@ console.log(orderNumbers);
             return element;
         }
     });
+    
+/*
+    // FORMA COMPATTA DEL FILTER
 
-// FORMA COMPATTA DEL FILTER
+    const nameInRange = names.filter((element, index) => {
 
-const nameInRange = names.filter((element, index) => {
+        return (index >= rangeNumbers[0] && index <= rangeNumbers[1]);
 
-    return (index >= rangeNumbers[0] && index <= rangeNumbers[1]);
-
-});
-
+    });
+*/
 
     console.log(nameInRange);
 
