@@ -159,7 +159,52 @@ Stampare a schermo la bici con peso minore.
 
     $('.container3').append(`la bici con peso minore è ${name} con un peso di ${weight}`);
 
-    // $('.container3').append(`la bici con peso minore è ${startName3} con un peso di ${startWeight3}`);
+
+
+    //--------------SOLUZIONE QUATTRO ----------------
+    //CON DESTRUCTURING E TEMPLATE LITERAL PIU' CORRETTA
+    //TEMPLATE LITERAL L'HO GIA USATO NELLE ALTRE SOLUZIONI DEVO QUINDI USARE DESTRACTURING
+
+
+
+        const bikes4 = [
+            {
+                nome : 'Bianchi',
+                peso : 9.1,
+            },
+            {
+                nome : 'Specialized',
+                peso : 8.4,
+            },
+            {
+                nome : 'Cannondale',
+                peso : 8.1,
+            },
+            {
+                nome : 'Colnago',
+                peso : 9.3,
+            },
+        ];
+
+        let finalArray4 = bikes4[0];  //e' gia un elemento
+
+
+        bikes4.forEach((item, i) => {
+            // console.log(item);
+
+            if (item.peso < finalArray4.peso) {
+                finalArray4 = item;
+            }
+
+        });
+
+        console.log(finalArray4);
+
+        const {nome, peso} = finalArray4;
+
+        console.log(nome, peso);
+
+        $('.container4').append(`la bici con peso minore è ${nome} con un peso di ${peso}`);
 
 
 
