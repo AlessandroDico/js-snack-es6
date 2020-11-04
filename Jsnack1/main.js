@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    console.log('hello');
+    // console.log('hello');
 
 /*
 Creare un array di oggetti: ogni oggetto descriverà una bici
@@ -10,7 +10,8 @@ da corsa con le seguenti proprietà: nome e peso.
 Stampare a schermo la bici con peso minore.
 */
 
-/*
+//------------------------------- SOLUZIONE UNO-------------------------
+
     const bikes = [
         {
             name : 'Bianchi',
@@ -31,7 +32,6 @@ Stampare a schermo la bici con peso minore.
     ];
 
 
-// SOLUZIONE UNO
 
 //come prima soluzione farò due array separati per quanto riguarda il nome e il peso...troverò il numero minore nell'array dei pesi e poi tramite indici troveò il nome bici corrispondente
 
@@ -45,8 +45,8 @@ Stampare a schermo la bici con peso minore.
         allNames.push(item.name);
     });
 
-    console.log(allWeights);
-    console.log(allNames);
+    // console.log(allWeights);
+    // console.log(allNames);
 
 //per trovare il numero inferiore in un array è sufficiente mettere la funzione più tre puntini e il nome dell'array in questione
     const minWeight = Math.min(...allWeights);
@@ -54,16 +54,16 @@ Stampare a schermo la bici con peso minore.
 
 //trovo l'indice relativo al numero più piccolo
     const indexLessWeight = allWeights.indexOf(minWeight);
-    console.log(indexLessWeight);
+    // console.log(indexLessWeight);
 
 //trovo il nome bici corrispondente all'indice del peso minore
     const bikeLessWeight = allNames[indexLessWeight];
     console.log(bikeLessWeight);
 
     $('.container').append(`la bici con peso minore è ${bikeLessWeight} con un peso di ${minWeight}`);
-*/
 
-//SOLUZIONE DUE
+
+//--------------------SOLUZIONE DUE-----------------------
 
     const bikes2 = [
         {
@@ -87,7 +87,7 @@ Stampare a schermo la bici con peso minore.
 //stabilisco il peso iniziale uguale al peso della prima bici
     let startWeight = bikes2[0].weight;
     let startName = bikes2[0].name;
-    console.log(startWeight);
+    // console.log(startWeight);
 
 
 //ora dovrò ciclare tutte le bici e capire se il peso della bici corrente è inferiore al peso iniziale.. in quel caso dovrò modificare il valore al peso iniziale
@@ -104,7 +104,7 @@ Stampare a schermo la bici con peso minore.
     console.log(startWeight);
     console.log(startName);
 
-    $('.container').append(`la bici con peso minore è ${startName} con un peso di ${startWeight}`);
+    $('.container2').append(`la bici con peso minore è ${startName} con un peso di ${startWeight}`);
 
 
 });
